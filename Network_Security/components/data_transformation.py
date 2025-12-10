@@ -25,14 +25,14 @@ class DataTransformation:
             self.data_validation_artifact:DataValidationArtifact=data_validation_artifact
             self.data_transformation_config:DataTransformationConfig=data_transformation_config
         except Exception as e:
-            raise Network_SecurityException(e,sys)
+            raise NetworkSecurityException(e,sys)
         
     @staticmethod
     def read_data(file_path) -> pd.DataFrame:
         try:
             return pd.read_csv(file_path)
         except Exception as e:
-            raise Network_SecurityException(e, sys)
+            raise NetworkSecurityException(e, sys)
         
     def get_data_transformer_object(cls)->Pipeline:
         """
@@ -56,7 +56,7 @@ class DataTransformation:
            processor:Pipeline=Pipeline([("imputer",imputer)])
            return processor
         except Exception as e:
-            raise Network_SecurityException(e,sys)
+            raise NetworkSecurityException(e,sys)
 
         
     def initiate_data_transformation(self)->DataTransformationArtifact:
@@ -106,4 +106,4 @@ class DataTransformation:
 
             
         except Exception as e:
-            raise Network_SecurityException(e,sys)
+            raise NetworkSecurityException(e,sys)

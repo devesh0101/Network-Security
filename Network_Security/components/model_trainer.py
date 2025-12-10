@@ -25,6 +25,10 @@ from sklearn.ensemble import (
 )
 import mlflow
 
+import dagshub
+
+dagshub.init(repo_owner='devesh.dhyani0101', repo_name='Network-Security', mlflow=True)
+
 
 
 class ModelTrainer:
@@ -48,7 +52,7 @@ class ModelTrainer:
             mlflow.log_metric("f1_score",f1_score)
             mlflow.log_metric("precision",precision_score)
             mlflow.log_metric("recall_score",recall_score)
-            mlflow.sklearn.log_model(best_model,"model")
+            # mlflow.sklearn.log_model(best_model,"model") # DagsHub doesn't support this endpoint
             
         
 
@@ -126,7 +130,7 @@ class ModelTrainer:
         Network_Model=NetworkModel(preprocessor=preprocessor,model=best_model)
         save_object(self.model_trainer_config.trained_model_file_path,obj=NetworkModel)
         
-        
+        save_object('final_models/final_model.pkl',best_model)
 
         ## Model Trainer Artifact
         model_trainer_artifact=ModelTrainerArtifact(trained_model_file_path=self.model_trainer_config.trained_model_file_path,
