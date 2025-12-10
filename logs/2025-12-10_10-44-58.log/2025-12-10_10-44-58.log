@@ -1,0 +1,27 @@
+[2025-12-10 10:45:00,207] INFO - Initiate the data Ingestion
+[2025-12-10 10:45:01,748] INFO - Performed train test split on the dataframe
+[2025-12-10 10:45:01,748] INFO - Exited split_data_as_train_test method of Data_Ingestion class
+[2025-12-10 10:45:01,749] INFO - Exporting train and test file path.
+[2025-12-10 10:45:01,776] INFO - Exported train and test file path.
+[2025-12-10 10:45:01,776] INFO - Data Ingestion completed
+[2025-12-10 10:45:01,778] INFO - Initiate the data Validation
+[2025-12-10 10:45:01,788] INFO - Required number of columns:2
+[2025-12-10 10:45:01,788] INFO - Data frame has columns:31
+[2025-12-10 10:45:01,788] INFO - Required number of columns:2
+[2025-12-10 10:45:01,788] INFO - Data frame has columns:31
+[2025-12-10 10:45:01,877] INFO - Data Validation completed
+[2025-12-10 10:45:01,877] INFO - Initiate the data Transformation
+[2025-12-10 10:45:01,877] INFO - Entered initiate_data_transformation method of DataTransformation class
+[2025-12-10 10:45:01,877] INFO - Starting data transformation
+[2025-12-10 10:45:01,887] INFO - Entered get_data_trnasformer_object method of Trnasformation class
+[2025-12-10 10:45:01,887] INFO - Initialise KNNImputer with {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
+[2025-12-10 10:45:01,892] INFO - Entered the save_object method of MainUtils class
+[2025-12-10 10:45:01,895] INFO - Exited the save_object method of MainUtils class
+[2025-12-10 10:45:01,895] INFO - Entered the save_object method of MainUtils class
+[2025-12-10 10:45:01,900] INFO - Exited the save_object method of MainUtils class
+[2025-12-10 10:45:01,900] INFO - Data Transformation completed
+[2025-12-10 10:45:01,900] INFO - Model Training sstared
+[2025-12-10 10:46:53,759] INFO - Entered the save_object method of MainUtils class
+[2025-12-10 10:46:53,760] INFO - Exited the save_object method of MainUtils class
+[2025-12-10 10:46:53,760] INFO - Model trainer artifact: ModelTrainerArtifact(trained_model_file_path='Artifacts/12_10_2025_10_44_59/model_trainer/trained_model/model.pkl', train_metric_artifact=ClassificationMetricArtifact(f1_score=0.9913503612496184, precision_score=0.990644702054098, recall_score=0.9920570264765785), test_metric_artifact=ClassificationMetricArtifact(f1_score=0.9768924302788845, precision_score=0.9707046714172605, recall_score=0.983159582999198))
+[2025-12-10 10:46:53,771] INFO - Model Training artifact created
