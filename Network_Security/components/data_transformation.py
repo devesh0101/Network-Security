@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 from sklearn.impute import KNNImputer
 from sklearn.pipeline import Pipeline
-
+# Importing constants
 from Network_Security.constant.training_pipeline import TARGET_COLUMN
 from Network_Security.constant.training_pipeline import DATA_TRANSFORMATION_IMPUTER_PARAMS
 
@@ -107,3 +107,5 @@ class DataTransformation:
             
         except Exception as e:
             raise NetworkSecurityException(e,sys)
+        
+
